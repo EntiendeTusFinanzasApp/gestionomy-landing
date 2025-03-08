@@ -86,9 +86,9 @@ export default function LandingPage() {
                 </div>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
                   <Button size="lg" onClick={handleGoApp}>
-                    Ir a la aplicación
+                    Probala gratis durante 10 días
                   </Button>
-                  <Button variant={"secondary"} size="lg" onClick={handleGoFrecuentes}>
+                  <Button variant={"outline"} size="lg" onClick={handleGoFrecuentes}>
                     Preguntas frecuentes
                   </Button>
                 </div>
@@ -615,6 +615,7 @@ export default function LandingPage() {
               </div>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
                 <Button onClick={handleContactWhatsApp} size="lg">Ponte en contacto</Button>
+                <Button onClick={handleGoApp} variant={'outline'} size="lg">Registrate gratis</Button>
               </div>
             </div>
           </div>
