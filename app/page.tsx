@@ -21,7 +21,6 @@ import {
   Accessibility,
   EyeClosed,
   Trash,
-  BarChart4,
   PencilIcon,
 } from "lucide-react";
 import Image from "next/image";
@@ -48,7 +47,7 @@ export default function LandingPage() {
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
           <div className="flex gap-2 items-center text-xl font-bold">
-            <BarChart4 className="h-6 w-6" />
+            <Image src="/images/icon/icon-nav.png" width={30}  height={30} alt="img" className="object-contain ms-2" />
             <span>Gestionomy</span>
           </div>
           <div className="flex flex-1 items-center justify-end space-x-4">
@@ -636,19 +635,7 @@ export default function LandingPage() {
               href="#"
               className="text-sm text-muted-foreground hover:text-foreground"
             >
-              Términos
-            </Link>
-            <Link
-              href="#"
-              className="text-sm text-muted-foreground hover:text-foreground"
-            >
-              Privacidad
-            </Link>
-            <Link
-              href="#"
-              className="text-sm text-muted-foreground hover:text-foreground"
-            >
-              Contacto
+              SAPE Solutions
             </Link>
           </div>
         </div>
