@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, DollarSign } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { faqCategories } from "@/data/faq-data";
@@ -17,12 +17,11 @@ import {
 import Footer from "@/components/footer";
 import { Category, Question } from "@/types/faq";
 
-
 export default function FAQDetailPage() {
   const params = useParams();
   const router = useRouter();
-  const [question, setQuestion] = useState<Question | null>(null)
-  const [category, setCategory] = useState<Category | null>(null)
+  const [question, setQuestion] = useState<Question | null>(null);
+  const [category, setCategory] = useState<Category | null>(null);
   const slug = params?.slug as string;
 
   useEffect(() => {
@@ -57,10 +56,14 @@ export default function FAQDetailPage() {
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
           <div className="flex gap-2 items-center text-xl font-bold">
-            <Link href="/" className="flex items-center gap-2">
-              <DollarSign className="h-6 w-6" />
-              <span>FinanceApp</span>
-            </Link>
+            <Image
+              src="/images/icon/icon-nav.png"
+              width={30}
+              height={30}
+              alt="img"
+              className="object-contain ms-2"
+            />
+            <span>Gestionomy</span>
           </div>
           <div className="flex flex-1 items-center justify-end space-x-4">
             <nav className="flex items-center space-x-2">
