@@ -24,8 +24,9 @@ import {
   PencilIcon,
 } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 import { ImageCarousel } from "@/components/image-carousel";
+import Footer from "@/components/footer";
+import Navbar from "@/components/navbar";
 
 export default function LandingPage() {
 
@@ -44,30 +45,7 @@ export default function LandingPage() {
   }
   return (
     <div className="flex min-h-screen flex-col">
-      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
-          <div className="flex gap-2 items-center text-xl font-bold">
-            <Image src="/images/icon/icon-nav.png" width={30}  height={30} alt="img" className="object-contain ms-2" />
-            <span>Gestionomy</span>
-          </div>
-          <div className="flex flex-1 items-center justify-end space-x-4">
-            <nav className="flex items-center space-x-2">
-              <Link
-                href="#features"
-                className="text-sm font-medium transition-colors hover:text-primary"
-              >
-                Características
-              </Link>
-              <Link
-                href="#modules"
-                className="text-sm font-medium transition-colors hover:text-primary"
-              >
-                Módulos
-              </Link>
-            </nav>
-          </div>
-        </div>
-      </header>
+      <Navbar/>
       <main className="flex-1">
         <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48">
           <div className="container px-4 md:px-6">
@@ -620,26 +598,7 @@ export default function LandingPage() {
           </div>
         </section>
       </main>
-      <footer className="w-full border-t bg-background py-6">
-        <div className="container flex flex-col items-center justify-center gap-4 px-4 md:px-6 md:flex-row md:justify-between">
-          <div className="flex gap-2 items-center text-xl font-bold">
-            
-            <span>Gestionomy</span>
-          </div>
-          <p className="text-center text-sm text-muted-foreground md:text-left">
-            &copy; {new Date().getFullYear()} Gestionomy. Todos los derechos
-            reservados.
-          </p>
-          <div className="flex gap-4">
-            <Link
-              href="#"
-              className="text-sm text-muted-foreground hover:text-foreground"
-            >
-              SAPE Solutions
-            </Link>
-          </div>
-        </div>
-      </footer>
+      <Footer/>
     </div>
   );
 }

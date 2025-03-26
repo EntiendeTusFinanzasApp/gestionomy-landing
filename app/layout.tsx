@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={poppins.className}>
-      <body>
+      <body className="min-h-screen bg-background">
         {children}
       </body>
     </html>
