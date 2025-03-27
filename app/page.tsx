@@ -34,12 +34,11 @@ export default function LandingPage() {
     window.open("https://gestionomy.com", "_blank");
   };
 
-  const handleGoFrecuentes = () => {
-    window.open("https://gestionomy.info/documentacion-gestionomy/", "_blank");
+  const handleGoInfo = () => {
+    window.open("https://gestionomy.info", "_blank");
   };
 
   const handleContactWhatsApp = () => {
-    // Reemplaza este número con el número real de WhatsApp (incluye el código de país sin el +)
     const phoneNumber = "5493816090225" 
     window.open(`https://wa.me/${phoneNumber}?text=Hola,%20estoy%20interesado%20en%20Gestionomy`, "_blank")
   }
@@ -65,8 +64,8 @@ export default function LandingPage() {
                   <Button size="lg" onClick={handleGoApp}>
                     Probala gratis durante 10 días
                   </Button>
-                  <Button variant={"outline"} size="lg" onClick={handleGoFrecuentes}>
-                    Preguntas frecuentes
+                  <Button variant={"outline"} size="lg" onClick={handleGoInfo}>
+                    Mas información
                   </Button>
                 </div>
               </div>
