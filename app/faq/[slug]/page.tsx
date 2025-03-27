@@ -54,7 +54,7 @@ export default function FAQDetailPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
+        <div className=" flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0 px-2">
           <div className="flex gap-2 items-center text-xl font-bold">
             <Image
               src="/images/icon/icon-nav.png"
@@ -69,13 +69,13 @@ export default function FAQDetailPage() {
             <nav className="flex items-center space-x-2">
               <Link
                 href="/"
-                className="text-sm font-medium transition-colors hover:text-primary"
+                className="text-xs font-medium transition-colors hover:text-primary md:text-sm"
               >
                 Inicio
               </Link>
               <Link
                 href="/faq"
-                className="text-sm font-medium transition-colors hover:text-primary"
+                className="text-xs font-medium transition-colors hover:text-primary md:text-sm"
               >
                 FAQ
               </Link>
@@ -85,7 +85,7 @@ export default function FAQDetailPage() {
       </header>
 
       <main className="flex-1">
-        <div className="container px-4 py-8 md:px-6 md:py-12">
+        <div className="px-4 py-8 md:px-6 md:py-12">
           <Breadcrumb className="mb-6">
             <BreadcrumbList>
               <BreadcrumbItem>
@@ -131,18 +131,18 @@ export default function FAQDetailPage() {
                 ))}
 
               {question.images && question.images.length > 0 && (
-                <div className="my-8 space-y-6">
+                <div className="my-8 space-y-6 flex justify-center">
                   {question.images.map((image, index) => (
                     <div
                       key={index}
-                      className="rounded-lg overflow-hidden border"
+                      className="rounded-lg overflow-hidden border max-w-[800px] "
                     >
                       <Image
                         src={image.src || "/placeholder.svg"}
                         alt={image.alt}
                         width={800}
                         height={450}
-                        className="w-full object-cover"
+                        className="object-cover"
                       />
                       {image.caption && (
                         <div className="bg-muted p-3 text-sm text-center">

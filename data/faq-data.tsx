@@ -6,6 +6,7 @@ import {
   ShoppingCart,
   HelpCircle,
   Users,
+  Bell,
 } from "lucide-react";
 import type { Category } from "@/types/faq";
 
@@ -284,7 +285,7 @@ export const faqCategories: Category[] = [
             caption: "Panel de configuración de features de la app",
           },
         ],
-        relatedQuestions: ["data-config", "install-app"],
+        relatedQuestions: ["data-import", "install-app"],
       },
       {
         id: "install-app",
@@ -313,10 +314,10 @@ export const faqCategories: Category[] = [
         slug: "crear-organizacion",
         title: "¿Cómo creo organizaciones en mi cuenta?",
         content:
-          'Además de tu cuenta personal, Gestionomy permite a los usuarios crear organizaciones y poder administrarlas, invitando usuarios, asignando distintos roles para poder limitar accesos y visualizaciones dependiendo de cada usuario.\n\n',
+          "Además de tu cuenta personal, Gestionomy permite a los usuarios crear organizaciones y poder administrarlas, invitando usuarios, asignando distintos roles para poder limitar accesos y visualizaciones dependiendo de cada usuario.\n\n",
         steps: [
           'En la vista principal haz click en tu nombre en el extremo superior derecho > "Create organization"',
-          'Elije un nombre para la misma, añade una imagen si deseas.',
+          "Elije un nombre para la misma, añade una imagen si deseas.",
           "Haz click en crear",
           "Luego podras seleccionarla para poder navegar en la misma con una vista diferente",
         ],
@@ -333,13 +334,13 @@ export const faqCategories: Category[] = [
       },
       {
         id: "add-users",
-        slug: "añadir-miembro",
+        slug: "agregar-miembro",
         title: "¿Cómo añado un miembro a mi organización?",
         content:
           "Seleccionas el nombre de la organización que desees y automáticamente se añadirá como una organización nueva creada y el espacio de trabajo cambiara y se ubicara en la nueva organización. \n\n Al hacer click en invitar, te pedirá que coloques el correo electrónico del usuario al que deseas invitar, no importa que dicho usuario no tenga cuenta con gestionomy en ese momento, al crearse una le aparecerá en su cuenta que cierta persona le solicito unirse a la organización.",
         images: [
           {
-            src: "/images/organization/invitar-miembro.webp",
+            src: "/images/organization/invitar.webp",
             alt: "Control de acceso",
             caption: "Configuración de permisos detallados para usuarios",
           },
@@ -366,7 +367,7 @@ export const faqCategories: Category[] = [
         slug: "cancelar-suscripcion",
         title: "¿Cómo puedo cancelar mi suscripción?",
         content:
-          'Puedes cancelar tu suscripción a Gestionomy en cualquier momento desde tu aplicación de Mercado Pago. La cancelación será efectiva al final del período de facturación actual, y podrás seguir utilizando todas las funciones hasta entonces.\n\nSi cancelas durante el período de prueba gratuita, no se te cobrará nada. Tus datos permanecerán en nuestro sistema durante 30 días después de la cancelación, por si decides reactivar tu cuenta.',
+          "Puedes cancelar tu suscripción a Gestionomy en cualquier momento desde tu aplicación de Mercado Pago. La cancelación será efectiva al final del período de facturación actual, y podrás seguir utilizando todas las funciones hasta entonces.\n\nSi cancelas durante el período de prueba gratuita, no se te cobrará nada. Tus datos permanecerán en nuestro sistema durante 30 días después de la cancelación, por si decides reactivar tu cuenta.",
 
         relatedQuestions: ["payment-methods", "change-plan"],
       },
@@ -380,115 +381,122 @@ export const faqCategories: Category[] = [
       },
     ],
   },
-//   {
-//     id: "notifications",
-//     name: "Notificaciones y Alertas",
-//     icon: <Bell className="h-5 w-5 text-primary" />,
-//     questions: [
-//       {
-//         id: "configure-notifications",
-//         slug: "configurar-notificaciones",
-//         title: "¿Cómo configuro mis notificaciones?",
-//         content:
-//           "Gestionomy te permite personalizar completamente las notificaciones que recibes. Puedes configurar alertas para eventos importantes como pagos recibidos, facturas vencidas, niveles bajos de inventario, y más.\n\nPuedes elegir recibir notificaciones por correo electrónico, notificaciones push en la aplicación móvil, o ambas. También puedes establecer la frecuencia de las notificaciones y programar resúmenes diarios o semanales.",
-//         steps: [
-//           'Ve a "Configuración" > "Notificaciones"',
-//           "Selecciona los tipos de notificaciones que deseas recibir",
-//           "Configura el método de entrega para cada tipo (email, push, etc.)",
-//           "Establece la frecuencia y horarios preferidos",
-//           "Guarda tus preferencias",
-//         ],
-//         images: [
-//           {
-//             src: "/placeholder.svg?height=450&width=800",
-//             alt: "Configuración de notificaciones",
-//             caption: "Panel de configuración de notificaciones y alertas",
-//           },
-//         ],
-//         relatedQuestions: ["reminder-setup", "mobile-notifications"],
-//       },
-//       {
-//         id: "reminder-setup",
-//         slug: "configurar-recordatorios",
-//         title: "¿Cómo configuro recordatorios para tareas pendientes?",
-//         content:
-//           "Gestionomy incluye un sistema de recordatorios para ayudarte a mantenerte al día con tus tareas financieras. Puedes configurar recordatorios para pagos pendientes, facturas por cobrar, declaraciones de impuestos, y cualquier otra tarea importante.\n\nLos recordatorios pueden ser puntuales o recurrentes, y puedes establecer múltiples alertas para un mismo evento (por ejemplo, 7 días antes, 3 días antes y el mismo día).",
-//         images: [
-//           {
-//             src: "/placeholder.svg?height=450&width=800",
-//             alt: "Configuración de recordatorios",
-//             caption: "Interfaz para crear y gestionar recordatorios",
-//           },
-//         ],
-//         relatedQuestions: ["configure-notifications", "mobile-notifications"],
-//       },
-//       {
-//         id: "mobile-notifications",
-//         slug: "notificaciones-moviles",
-//         title: "¿Cómo funcionan las notificaciones en la app móvil?",
-//         content:
-//           "La aplicación móvil de Gestionomy te mantiene informado sobre tu negocio incluso cuando estás en movimiento. Las notificaciones push te alertan sobre eventos importantes como pagos recibidos, facturas vencidas o niveles bajos de inventario.\n\nPuedes personalizar qué notificaciones recibes en tu dispositivo móvil y establecer horas silenciosas durante las cuales no recibirás alertas. Todas las notificaciones también están disponibles en el centro de notificaciones dentro de la aplicación.",
-//         images: [
-//           {
-//             src: "/placeholder.svg?height=450&width=800",
-//             alt: "Notificaciones móviles",
-//             caption: "Centro de notificaciones en la aplicación móvil",
-//           },
-//         ],
-//         relatedQuestions: ["configure-notifications", "reminder-setup"],
-//       },
-//     ],
-//   },
-//   {
-//     id: "legal",
-//     name: "Legal y Cumplimiento",
-//     icon: <FileText className="h-5 w-5 text-primary" />,
-//     questions: [
-//       {
-//         id: "data-compliance",
-//         slug: "cumplimiento-normativo",
-//         title: "¿Gestionomy cumple con las normativas fiscales?",
-//         content:
-//           "Gestionomy está diseñado para ayudarte a cumplir con las normativas fiscales y contables de tu país. La aplicación se actualiza regularmente para adaptarse a los cambios en la legislación fiscal.\n\nOfrecemos plantillas de facturas que cumplen con los requisitos legales, cálculo automático de impuestos, y reportes diseñados para facilitar tus declaraciones fiscales. Sin embargo, siempre recomendamos consultar con un profesional contable para asegurar el cumplimiento total de las normativas específicas de tu jurisdicción.",
-//         images: [
-//           {
-//             src: "/placeholder.svg?height=450&width=800",
-//             alt: "Cumplimiento normativo",
-//             caption: "Configuración de impuestos y normativas fiscales",
-//           },
-//         ],
-//         relatedQuestions: ["gdpr-compliance", "data-retention"],
-//       },
-//       {
-//         id: "gdpr-compliance",
-//         slug: "cumplimiento-gdpr",
-//         title: "¿Cómo cumple Gestionomy con el GDPR?",
-//         content:
-//           "Gestionomy cumple completamente con el Reglamento General de Protección de Datos (GDPR) de la Unión Europea. Implementamos medidas técnicas y organizativas para proteger los datos personales de tus clientes y empleados.\n\nOfrecemos herramientas para que puedas cumplir con las solicitudes de acceso, rectificación o eliminación de datos personales. También mantenemos registros detallados de todas las actividades de procesamiento de datos y realizamos evaluaciones de impacto cuando es necesario.",
-//         images: [
-//           {
-//             src: "/placeholder.svg?height=450&width=800",
-//             alt: "Cumplimiento GDPR",
-//             caption: "Herramientas de gestión de datos personales y privacidad",
-//           },
-//         ],
-//         relatedQuestions: ["data-compliance", "data-retention"],
-//       },
-//       {
-//         id: "data-retention",
-//         slug: "retencion-de-datos",
-//         title: "¿Cuál es la política de retención de datos?",
-//         content:
-//           "Gestionomy implementa políticas de retención de datos que equilibran tus necesidades comerciales con los requisitos legales y de privacidad. Por defecto, mantenemos tus datos financieros durante el tiempo que mantengas tu cuenta activa, más un período adicional según los requisitos legales de tu jurisdicción (generalmente entre 5 y 10 años para datos financieros).\n\nPuedes configurar políticas de retención personalizadas para diferentes tipos de datos, y ofrecemos herramientas para archivar o eliminar datos antiguos que ya no necesitas acceder regularmente pero debes conservar por motivos legales.",
-//         images: [
-//           {
-//             src: "/placeholder.svg?height=450&width=800",
-//             alt: "Retención de datos",
-//             caption: "Configuración de políticas de retención de datos",
-//           },
-//         ],
-//         relatedQuestions: ["data-compliance", "gdpr-compliance"],
-//       },
-//     ],
-//   },
+  {
+    id: "notifications",
+    name: "Tareas y Ahorros",
+    icon: <Bell className="h-5 w-5 text-primary" />,
+    questions: [
+      {
+        id: "configure-task",
+        slug: "configurar-tareas",
+        title: "¿Cómo asignar tareas a mis empleados?",
+        content:
+          "Gestionomy te permite asignar tareas y etiquetar a los miembors de tu organización. Mantente al día a tus empleados y gestiona tus tareas pendientes desde un solo lugar. \n\n Esto solo esta disponible en el modulo de Organizacion",
+        steps: [
+          'Haz click en tu perfil abajo a la izquierda > "Notificaciones"',
+          "Haz click en 'Nueva'",
+          "Selecciona el destinatario y escribe tu mensaje",
+          "Filtra por fecha y por status de la tarea",
+          "Revisa las tareas asignadas o creadas cuando quieras",
+        ],
+        images: [
+          {
+            src: "/images/notifications/tareas.png",
+            alt: "Configuración de tareas",
+            caption: "Panel de configuración de tareas y alertas",
+          },
+        ],
+        relatedQuestions: ["savings-setup", "activities-log"],
+      },
+      {
+        id: "savings-setup",
+        slug: "configurar-ahorros",
+        title: "¿Cómo puedo depósitar o retirar ahorros?",
+        content:
+          "Gestionomy permite que puedas tener el seguimiento de tus ahorros tanto retiros o depositos y poder visualizar las fechas y el motivo de los mismos. Puedes configurar la moneda ya sea Pesos o Dolares. ",
+        steps: [
+          'Ingresa desde la navegación principal a "Ahorros"',
+          "Haz click en 'Retirar' o 'Depositar'",
+          "Selecciona la moneda",
+          "Coloca el monto y descripción si lo deseas",
+          "Revisa que haya sido creado y listo.",
+        ],
+        images: [
+          {
+            src: "/images/notifications/ahorros.png",
+            alt: "Configuración de ahorros",
+            caption: "Interfaz para depositar y retirar ahorros",
+          },
+        ],
+        relatedQuestions: ["configure-task", "activities-log"],
+      },
+      {
+        id: "activities-log",
+        slug: "actividades",
+        title: "¿Cómo hago seguimiento de lo generado en la app?",
+        content:
+          "La aplicación  Gestionomy te mantiene informado sobre tu negocio con la bitacora de actividades. Puedes entrar y ver cual fueron las tareas generadas, transacciones creadas y ver quien fue el responsable de cada acción generada.",
+        images: [
+          {
+            src: "/images/notifications/actividades.png",
+            alt: "Registro de actividades",
+            caption: "Centro de actividades en la aplicación",
+          },
+        ],
+        relatedQuestions: ["configure-task", "savings-setup"],
+      },
+    ],
+  },
+  //   {
+  //     id: "legal",
+  //     name: "Legal y Cumplimiento",
+  //     icon: <FileText className="h-5 w-5 text-primary" />,
+  //     questions: [
+  //       {
+  //         id: "data-compliance",
+  //         slug: "cumplimiento-normativo",
+  //         title: "¿Gestionomy cumple con las normativas fiscales?",
+  //         content:
+  //           "Gestionomy está diseñado para ayudarte a cumplir con las normativas fiscales y contables de tu país. La aplicación se actualiza regularmente para adaptarse a los cambios en la legislación fiscal.\n\nOfrecemos plantillas de facturas que cumplen con los requisitos legales, cálculo automático de impuestos, y reportes diseñados para facilitar tus declaraciones fiscales. Sin embargo, siempre recomendamos consultar con un profesional contable para asegurar el cumplimiento total de las normativas específicas de tu jurisdicción.",
+  //         images: [
+  //           {
+  //             src: "/placeholder.svg?height=450&width=800",
+  //             alt: "Cumplimiento normativo",
+  //             caption: "Configuración de impuestos y normativas fiscales",
+  //           },
+  //         ],
+  //         relatedQuestions: ["gdpr-compliance", "data-retention"],
+  //       },
+  //       {
+  //         id: "gdpr-compliance",
+  //         slug: "cumplimiento-gdpr",
+  //         title: "¿Cómo cumple Gestionomy con el GDPR?",
+  //         content:
+  //           "Gestionomy cumple completamente con el Reglamento General de Protección de Datos (GDPR) de la Unión Europea. Implementamos medidas técnicas y organizativas para proteger los datos personales de tus clientes y empleados.\n\nOfrecemos herramientas para que puedas cumplir con las solicitudes de acceso, rectificación o eliminación de datos personales. También mantenemos registros detallados de todas las actividades de procesamiento de datos y realizamos evaluaciones de impacto cuando es necesario.",
+  //         images: [
+  //           {
+  //             src: "/placeholder.svg?height=450&width=800",
+  //             alt: "Cumplimiento GDPR",
+  //             caption: "Herramientas de gestión de datos personales y privacidad",
+  //           },
+  //         ],
+  //         relatedQuestions: ["data-compliance", "data-retention"],
+  //       },
+  //       {
+  //         id: "data-retention",
+  //         slug: "retencion-de-datos",
+  //         title: "¿Cuál es la política de retención de datos?",
+  //         content:
+  //           "Gestionomy implementa políticas de retención de datos que equilibran tus necesidades comerciales con los requisitos legales y de privacidad. Por defecto, mantenemos tus datos financieros durante el tiempo que mantengas tu cuenta activa, más un período adicional según los requisitos legales de tu jurisdicción (generalmente entre 5 y 10 años para datos financieros).\n\nPuedes configurar políticas de retención personalizadas para diferentes tipos de datos, y ofrecemos herramientas para archivar o eliminar datos antiguos que ya no necesitas acceder regularmente pero debes conservar por motivos legales.",
+  //         images: [
+  //           {
+  //             src: "/placeholder.svg?height=450&width=800",
+  //             alt: "Retención de datos",
+  //             caption: "Configuración de políticas de retención de datos",
+  //           },
+  //         ],
+  //         relatedQuestions: ["data-compliance", "gdpr-compliance"],
+  //       },
+  //     ],
+  //   },
 ];

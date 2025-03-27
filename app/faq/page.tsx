@@ -42,9 +42,9 @@ export default function FAQPage() {
   }, [searchQuery]);
 
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="flex min-h-screen flex-col px-2">
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
+        <div className="flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0 px-1">
           <div className="flex gap-2 items-center text-xl font-bold">
             <Image
               src="/images/icon/icon-nav.png"
@@ -70,7 +70,7 @@ export default function FAQPage() {
       </header>
       <main className="flex-1">
         <section className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6">
+          <div className=" px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl">
